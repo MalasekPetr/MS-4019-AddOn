@@ -45,6 +45,31 @@ flowchart TB
 > [!IMPORTANT] Slidy vs. realita
 > Speaker notes MS decku tvrdí, že agenti pro běžné uživatele „neobsahují generativní AI". **To neplatí** — všichni agenti v kurzu generují odpovědi stejným jazykovým modelem jako Copilot. Rozdíl oproti pokročilým agentům je v **akcích a integracích** (zápis do systémů, workflow), ne v generativní AI.
 
+### Deklarativní agenti — srovnání
+
+Všichni agenti, které v kurzu tvoříte, jsou technicky **deklarativní agenti** (*declarative agents*): agent je jen **konfigurace** — instrukce, zdroje znalostí, schopnosti (u pokročilých i akce) — a odpovědi generuje **model a orchestrátor Microsoft 365 Copilotu**. Opakem je **custom engine agent** s vlastním modelem a orchestrací (Copilot Studio, Microsoft 365 Agents SDK, Azure AI Foundry) — mimo kurz.
+
+Deklarativní agenty lze postavit ve čtyřech nástrojích. Liší se tím, **odkud agent čerpá**, **jestli umí akce** a **jak se dostane k uživatelům**:
+
+| | **Agent Builder** (Copilot Chat agent) | **SharePoint agent** | **Copilot Studio** | **Agents Toolkit** (VS Code) |
+|---|---|---|---|---|
+| Kdo tvoří | kdokoli, bez kódu | Member / Owner webu, bez kódu | maker, low-code | vývojář, JSON manifest |
+| Zdroje znalostí | web, SharePoint (weby, knihovny, soubory), nahrané soubory, e-mail a Teams chaty, Copilot konektory | **jen obsah SharePointu** (weby, knihovny, složky, soubory; max 20 zdrojů) | jako Agent Builder + Dataverse a další zdroje Power Platform | SharePoint, web, Copilot konektory, vložené soubory |
+| Schopnosti | Code interpreter, Image generator | — | Code interpreter, Image generator | Code interpreter, Image generator |
+| **Akce** (zápis do systémů) | ❌ | ❌ | ✅ konektory, Power Automate flows, REST API | ✅ API pluginy (OpenAPI), MCP servery |
+| Kde je definice | v Copilot appce u autora | soubor **`.agent`** v knihovně webu | prostředí Power Platform | zdrojový kód (Git) → balíček aplikace |
+| Sdílení | odkazem: jen já / vybraní lidé / celá organizace | odkazem, do Teams chatu; Owner **schválí** a může nastavit jako výchozí | publikace do Microsoft 365 Copilot a Teams | nasazení balíčku |
+| Schválení pro celou firmu | admin v Microsoft 365 admin center | Owner webu (v rámci webu) | admin v Microsoft 365 admin center | admin v Microsoft 365 admin center |
+| V kurzu | ✅ | ✅ | jen zmínka | ❌ |
+
+**Co mají společné:** stejný jazykový model, **respektují oprávnění tazatele**, instrukce + zdroje znalostí + navržené dotazy. Rozhodnutí mezi nimi je proto hlavně o **rozsahu zdrojů** (jeden web vs. cokoli) a o **potřebě akcí**.
+
+> [!TIP] Kterým nástrojem začít
+>
+> - Odpovědi jen nad obsahem **jednoho webu / knihovny** → **SharePoint agent**.
+> - Kombinace zdrojů (více webů, soubory, web, e-mail) → **Agent Builder**.
+> - Agent má něco **zapsat, založit nebo spustit** → Copilot Studio (maker) nebo Agents Toolkit (vývojář) — předejte IT.
+
 ## Kdo může agenty tvořit a používat
 
 ### Podle licence
@@ -102,3 +127,4 @@ Otázky jsou v [`instructor-notes.md`](instructor-notes.md) — lektor je promí
 
 > [!WARNING] Ověřit k datu běhu — stav k 2026-09.
 > Licenční split Copilot Chat / PAYG / licence a výchozí chování ready-made agentů se mění. Plná tabulka schopností je v Learn jednotce „Agents and Access in Microsoft 365 Copilot".
+> Srovnání deklarativních agentů: ověřit dostupné zdroje znalostí v Agent Builderu (e-mail, Teams chaty, konektory), limit 20 zdrojů u SharePoint agenta a možnosti sdílení — viz [Declarative agents overview](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/overview-declarative-agent).

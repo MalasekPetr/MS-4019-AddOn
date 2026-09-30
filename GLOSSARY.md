@@ -14,6 +14,8 @@ Jediný zdroj pravdy pro názvy. Microsoft agenty přejmenovává často — ve 
 | **Ready-made agent** | výchozí agent webu | automaticky vytvořený agent každého SharePoint webu, scopovaný na obsah webu. Nejde upravit ani smazat. |
 | **SharePoint agent** | agent SharePointu | agent vytvořený na konkrétním SharePoint webu, nad jeho obsahem. |
 | **Copilot Chat agent** | agent v Copilot Chatu | agent vytvořený v Agent Builderu přímo v Microsoft 365 Copilot appce. |
+| **Declarative agent** | deklarativní agent | agent definovaný jen konfigurací (instrukce, znalosti, schopnosti, příp. akce), který běží na modelu a orchestrátoru Microsoft 365 Copilotu. Všichni agenti tvoření v kurzu jsou deklarativní. |
+| **Custom engine agent** | agent s vlastním enginem | agent s vlastním modelem a orchestrací (Copilot Studio, Agents SDK, Azure AI Foundry). **Mimo rozsah kurzu.** |
 | **Agent Builder** | — | jednoduchý editor agentů uvnitř Microsoft 365 Copilot (záložky **Describe** a **Configure**). |
 | **Agent Store** | obchod agentů | katalog agentů v Copilotu (Microsoft, partneři, „Built by your org"). |
 | **Knowledge (sources)** | zdroje znalostí | weby, knihovny, soubory, (listy), weby na internetu, konektory — odkud agent čerpá. |
