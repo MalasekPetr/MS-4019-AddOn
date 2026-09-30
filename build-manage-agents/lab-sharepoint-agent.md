@@ -46,6 +46,7 @@ Postavit agenta nad obsahem **jednoho SharePoint webu** a zažít rozdíl oproti
 - **Nemáte web s Edit** → simulace Fabrikam.
 - **Tvorba nejde kvůli licenci / nastavení** → simulace Fabrikam, nebo demo lektora.
 - **Agent neodpovídá z obsahu** → dokumenty mohou být čerstvě nahrané a ještě nezaindexované; zkuste starší dokumenty nebo počkejte.
+- **Tenant nemá SharePoint Online** → SharePoint agent nejde; postavte [Lab 1-F · agent nad veřejným webem](lab-web-grounded-agent.md).
 
 ## Reflexe
 

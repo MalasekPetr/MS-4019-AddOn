@@ -51,6 +51,7 @@ Postavit agenta, který řeší **váš** reálný problém — a otestovat ho p
 ## Fallback
 
 - **Nemáte přístup k firemním datům** (Copilot Chat bez licence a bez PAYG) → jako zdroj použijte **veřejný web** (např. web vaší firmy, [portál veřejné správy](https://portal.gov.cz)). Postup je stejný.
+- **Není SharePoint Online** → hotový scénář s instrukcemi a testy: [Lab 1-F · agent nad veřejným webem](lab-web-grounded-agent.md).
 - **Tvorba agentů vypnutá adminem** → sledujte demo lektora, část A (návrh + testy) je plnohodnotný výstup.
 - **Describe tab není k dispozici** (jazyk/region) → vše vyplňte v **Configure**.
 
